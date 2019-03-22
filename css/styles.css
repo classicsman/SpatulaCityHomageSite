@@ -1,0 +1,259 @@
+
+/* Styles for the viewport border */
+
+#top, #bottom, #left, #right {
+  background: #ac3939;
+  position: fixed;
+}
+
+#left, #right {
+  top: 0; bottom: 0;
+  width: 8px;
+}
+
+#left {
+  left: 0; 
+}
+
+#right {
+  right: 0;
+}
+		
+#top, #bottom {
+  left: 0; right: 0;
+  height: 8px;
+}
+
+#top {
+  top: 0;
+}
+
+#bottom {
+  bottom: 0;
+}
+
+
+/* Styles for the viewport corner dots */
+/* The pixel values are negative to embed the dots into the border */
+
+#dotTL {
+  height: 30px;
+  width: 30px;
+  background-color: #ac3939;
+  border-radius: 50%;
+  position: fixed;
+  top: -5px;
+  left: -5px;
+}
+
+#dotTR {
+  height: 30px;
+  width: 30px;
+  background-color: #ac3939;
+  border-radius: 50%;
+  position: fixed;
+  top: -5px;
+  right: -5px;
+}
+
+#dotBL {
+  height: 30px;
+  width: 30px;
+  background-color: #ac3939;
+  border-radius: 50%;
+  position: fixed;
+  bottom: -5px;
+  left: -5px;
+}
+
+#dotBR {
+  height: 30px;
+  width: 30px;
+  background-color: #ac3939;
+  border-radius: 50%;
+  position: fixed;
+  bottom: -5px;
+  right: -5px;
+}
+
+
+body {
+  background: #ffffb3;
+  text-align: center;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  color: #ac3939;
+}
+
+h1 {
+  font-family: courier new;
+  font-size: 50px;
+}
+
+h1, #quotes {
+  color: white;
+
+  /* Styles for makeshift header and quote text outlining */
+
+  /* These are actually two different methods. I experimented with them extensively and found I liked them best when combined in this way */
+
+  text-shadow: 
+    #ac3939 0px 0px 3px,
+    #ac3939 0px 0px 3px,
+    #ac3939 0px 0px 3px,
+    #ac3939 0px 0px 3px,
+	-1.5px -1.5px 0 #ac3939,
+	1.5px -1.5px 0 #ac3939,
+	-1.5px 1.5px 0 #ac3939,
+	1.5px 1.5px 0 #ac3939;
+}
+
+#quotes {
+  font-size: 25px;
+}
+
+#motto {
+  font-size: 30px;
+  padding: 0, 10px;
+}
+
+h3, h4 {
+  padding: 10px;
+}
+
+li {
+  text-align: center;
+}
+
+.no-bullets {
+  padding-right: 35px;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+}
+
+header {
+  padding-bottom: 10px;
+}
+
+button {
+  background-color: #ac3939; 
+  border: none;
+  border-radius: 20px;  
+  color: #ffffb3;
+  font-size: 18px; 
+  padding: 5px;
+  text-decoration: none;
+}
+
+/* Flipping the quote button's colors and making it slightly larger on hover */
+
+#submit:hover {
+  background: #ffffb3;
+  border: 1px solid #ac3939;
+  border-radius: 20px;
+  color: #ac3939;
+  font-size: 20px;
+  padding: 5px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.container {
+  padding-top: 25px;
+}
+
+p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+img {
+  padding: 3px;
+  border: 1px solid #ac3939;
+  background-color: #ffffb3;
+}
+
+footer {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+
+/* Responsive media queries adjusitng spacing, nav menu, headings, and product divs */
+
+@media (min-width: 768px) {
+
+  h1 {
+    font-family: courier new;
+    font-size: 80px;
+    color: white;
+  }
+
+  #motto {
+    font-size: 45px;
+  }
+
+  header {
+    clear: both;
+  }
+
+  li.nav {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  .about {
+    padding-top: 10px;
+    clear: both;
+  }
+
+}
+
+
+@media (min-width: 950px) {
+
+  h1 {
+    font-size: 100px;
+  }
+
+  #motto {
+    font-size: 60px;
+  }
+
+
+/* Styles to put the articles into two columns for med/lg screens */
+
+  .columnA {
+    float: left;
+    width: 50%;
+  }
+
+  .columnB {
+    float: right;
+    width: 50%;
+  }
+
+  div.odd {
+    display: flex;
+    justify-content: center-around;
+    float: left;
+    padding-right: 10px;
+    padding-left: 15%;
+    clear: left;
+  }
+
+  div.even {
+    display: flex;
+    justify-content: center-around;
+    float: right;
+    padding-left: 10px;
+    padding-right: 15%;
+    clear: right;
+  }
+
+}
+
+
